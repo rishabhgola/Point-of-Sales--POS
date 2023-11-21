@@ -1,0 +1,92 @@
+
+<div class="container">
+
+  <!-- Left Side Container -->
+
+ <div class="left-container">
+        <div class="first-table">
+            <table>
+                <thead>
+                    <th>Products</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </thead>
+                <tbody *ngIf="appCommonService.TableData.length > 0;">
+                    <tr *ngFor="let data of appCommonService.TableData">
+                        <td class="title-td" style="align-items: center; justify-content: left;">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="circle-xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-circle-xmark" (click)="removeData(data)">
+                                <g class="fa-duotone-group">
+                                    <path fill="#e52f28" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" class="fa-secondary">
+                                    </path>
+                                    <path fill="#fff" d="M209 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47z" class="fa-primary"></path></g></svg>
+                            {{data.name}}</td>
+                        <td>${{ data.price || 0 }}</td>
+                        <td class="title-td"><i class="fa-solid fa-minus" (click)="decreaseQuantity(data)"></i>{{data.quantity}}<i class="fa-solid fa-plus" (click)="increaseQuantity(data)"></i></td>
+                        <td>${{data.total}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="no-products" *ngIf="appCommonService.TableData.length == 0;">
+                <h1>THERE ARE NO PRODUCTS</h1>
+            </div>
+        </div>
+
+        <div class="pricing-div">
+            <div class="left-side">
+                <h4>SubTotal</h4>
+                <h4>VAT Tax</h4>
+                <h4>Discount</h4>
+                <h4>Total</h4>
+            </div>
+            <div class="right-side">
+                <div class="pricing-detail">
+                    <span>${{appCommonService.subTotal | number:'1.2-2'}}</span>
+                    <span style="font-weight: bold;">{{appCommonService.totalItems}} items</span>
+                </div>
+                <div class="pricing-detail">
+                    <div class="vat-input">
+                        <input type="text" [(ngModel)]="appCommonService.VAT" (keyup)="getVATValue()">%
+                    </div>
+                    <span style="font-weight: bold;">${{appCommonService.VATValue | number:'1.2-2'}}</span>
+                </div>
+                <div class="pricing-detail">
+                    <div class="dicsount-input">
+                        <input type="text" [(ngModel)]="appCommonService.Discount" (keyup)="getDiscountValue()">%
+                    </div>
+                    <span style="font-weight: bold;">${{appCommonService.DiscountValue | number:'1.2-2'}}</span>
+                </div>
+                <div class="pricing-detail">
+                    <span>${{appCommonService.Total | number:'1.2-2'}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-div">
+            <app-receipt [showModal]="isModalOpen" (closeModal)="closeModal()"></app-receipt>
+            <div class="sale-btn cancel-btn" (click)="cancelSale()">CANCEL SALE</div>
+            <div class="sale-btn process-btn" (click)="openModal()">PROCESS SALE</div>
+        </div>
+
+
+    </div>
+
+<!-- Right Side Container -->
+
+    <div class="right-container">
+        <div class="card-container">
+            <div class="card" *ngFor="let fruit of appCommonService.FruitList" (click)="addFruitToTable(fruit)">
+                <h4>{{fruit.name}}</h4>
+                <img [src]="fruit.image" alt="">
+                <div class="overlay" [style.background-color]="generateRandomColor()">
+                    <div class="detail">
+                        <span class="detail-data">${{fruit.price}}</span>
+                        <h3 class="detail-data">{{fruit.description}}</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

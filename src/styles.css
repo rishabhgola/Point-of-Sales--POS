@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+
+#snackbar, #snackbar2 {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 99999999999;
+    right: 2%;
+    top: 16px;
+    border-radius: 5px;
+  }
+
+  #snackbar{
+    background-color: #2d9300;
+  }
+
+  #snackbar2{
+    background-color: #f02416;
+  }
+
+  
+  #snackbar.show {
+    visibility: visible;
+  }
+
+  #snackbar2.show {
+    visibility: visible;
+  }

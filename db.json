@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Apple",
+      "price": 100,
+      "category": "fruits",
+      "quantity": 1,
+      "description": "This is Apple",
+      "image": "https://media.istockphoto.com/id/495878092/photo/red-apple.jpg?b=1&s=612x612&w=0&k=20&c=kx946oMceMjVYSpC8cyhuUMwjzgMdkdthzeMr3OxPiA="
+    },
+    {
+      "id": 2,
+      "name": "Mango",
+      "price": 150,
+      "category": "fruits",
+      "quantity": 1,
+      "description": "This is Mango",
+      "image": "https://t4.ftcdn.net/jpg/02/71/66/91/360_F_271669174_2dHs4FO3SV83lQ4MjswEBa4LQTGjMO4E.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Orange",
+      "price": 200,
+      "category": "fruits",
+      "quantity": 1,
+      "description": "This is Orange",
+      "image": "https://t3.ftcdn.net/jpg/02/01/79/54/360_F_201795443_a16jojvPRiobPC96uO7ePHSNzGVoBLbc.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Banana",
+      "price": 50,
+      "category": "fruits",
+      "quantity": 1,
+      "description": "This is Banana",
+      "image": "https://media.istockphoto.com/id/1400057530/photo/bananas-isolated.webp?b=1&s=170667a&w=0&k=20&c=uiSdjIQkTr7S4gEdW_oB_5zfFYhpfe0LP-CryQl49w4="
+    },
+    {
+      "id": 5,
+      "name": "Strawberry",
+      "price": 120,
+      "category": "fruits",
+      "quantity": 1,
+      "description": "This is Strawberry",
+      "image": "https://images.unsplash.com/photo-1622921491193-345ffb510f6f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHN0cmF3YmVycnl8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      "id": 6,
+      "name": "Grapes",
+      "price": 175,
+      "category": "fruits",
+      "quantity": 1,
+      "description": "This is Grapes",
+      "image": "https://media.istockphoto.com/id/1295773461/photo/purple-grape-isolated-on-white-background-clipping-path-full-depth-of-field.webp?b=1&s=170667a&w=0&k=20&c=KcWHGIRSEHixngCbujWX2RIcCf3D1jl5g2vAYOnEC70="
+    },
+    {
+      "id": 7,
+      "name": "Watermelon",
+      "price": 160,
+      "category": "fruits",
+      "quantity": 1,
+      "description": "This is Watermelon",
+      "image": "https://e0.pxfuel.com/wallpapers/140/403/desktop-wallpaper-watermelon-background-cool-watermelon.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Cherry",
+      "price": 80,
+      "category": "fruits",
+      "quantity": 1,
+      "description": "This is Cherry",
+      "image": "https://images.unsplash.com/photo-1528820600606-0ef5600cbfee?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2hlcnJ5fGVufDB8fDB8fHww"
+    }
+  ]
+}
